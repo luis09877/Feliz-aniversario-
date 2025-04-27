@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+        h1, p {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+        }
+        .intro-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .intro-screen button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: 2px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .intro-screen button:hover {
+            background-color: gray;
+            transform: scale(1.1);
+        }
+        .main-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .main-content img {
+            max-width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px 0;
+            border: 5px solid white;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+        .main-content img:hover {
+            transform: scale(1.05);
+        }
+        .text-section {
+            margin: 20px 0;
+            font-size: 20px;
+            line-height: 1.8;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            animation: confetti 2s infinite linear;
+        }
+        @keyframes confetti {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti">
+        <!-- Simple confetti animation background -->
+        <div style="position: absolute; top: 20%; left: 30%; width: 5px; height: 10px; background: #f39c12;"></div>
+        <div style="position: absolute; top: 50%; left: 70%; width: 5px; height: 10px; background: #e67e22;"></div>
+        <div style="position: absolute; top: 10%; left: 50%; width: 5px; height: 10px; background: #ecf0f1;"></div>
+        <div style="position: absolute; top: 30%; left: 10%; width: 5px; height: 10px; background: #f39c12;"></div>
+        <div style="position: absolute; top: 80%; left: 20%; width: 5px; height: 10px; background: #e67e22;"></div>
+    </div>
+    <div class="intro-screen" id="intro-screen">
+        <h1>Feliz Aniversário</h1>
+        <p>Meu amor ❤️</p>
+        <button onclick="showMainContent()">Entrar</button>
+    </div>
+    <div class="main-content" id="main-content">
+        <!-- Imagem transformada para o estilo Ghibli -->
+        <img src="https://i.postimg.cc/MpNkpkxb/file-0000000004c462308a5240ad2cb79fee.png" alt="Imagem Estilo Ghibli">
+
+        <div class="text-section">
+            <p>Feliz aniversário Ana, hoje é um dia especial, e eu não podia deixar de te lembrar o quanto você é importante para mim. Sinto tanta saudades de estar com você, das nossas conversas e das brigas, principalmente de te provocar kkkkk. Te amo muito, e mesmo com a distância, você está sempre presente no meu coração. Que o seu aniversário seja cheio de amor, alegria e tudo de melhor que a vida tem a oferecer, porque você merece isso e muito mais. Parabéns meu amor, aproveita seu dia princesa❤️❤️...
+            </p>
+        </div>
+    </div>
+
+<script>
+    function showMainContent() {
+        document.getElementById('intro-screen').style.display = 'none';
+        document.getElementById('main-content').style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>
